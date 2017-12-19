@@ -4,11 +4,15 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run pug-it:w & npm run server",
+    "server": "ng serve --port 4210",
+    "prebuild": "yarn run pug-it",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "pug-it": "pug src",
+    "pug-it:w": "pug src -P -w"
   },
   "private": true,
   "dependencies": {
@@ -45,6 +49,7 @@
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "protractor": "~5.1.2",
+    "pug-cli": "^1.0.0-alpha6",
     "ts-node": "~3.2.0",
     "tslint": "~5.7.0",
     "typescript": "~2.4.2"
