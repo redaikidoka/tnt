@@ -1,5 +1,15 @@
 mat-toolbar 
   h1.mat-headline Tracker
+
+mat-form-field
+  mat-select(placeholder="Select a School")
+    mat-option(*ngFor="let school of schools", [value]="school.uid_school") 
+      | {{ school.school_name }}
+
+mat-form-field
+  mat-select(placeholder="Select a Year")
+    mat-option(*ngFor="let year of years", [value]="year.school_year") 
+      | {{ year.school_year }}
 mat-sidenav-container
   mat-sidenav.mat-sidebar(position="start", mode="side", opened="true", disableClose) 
     span Start

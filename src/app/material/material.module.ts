@@ -8,15 +8,17 @@ import {
 } from '@angular/material';
 
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   imports: [
     CommonModule,
     MatButtonModule,
     MatToolbarModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatSelectModule
   ],
-  exports: [MatButtonModule, MatToolbarModule, MatSidenavModule],
+  exports: [MatButtonModule, MatToolbarModule, MatSidenavModule, MatSelectModule],
   declarations: []
 })
 
