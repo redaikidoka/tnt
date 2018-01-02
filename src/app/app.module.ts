@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { TrackerModule } from './tracker/tracker.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { TrackerModule } from './tracker/tracker.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    TrackerModule
+    TrackerModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
