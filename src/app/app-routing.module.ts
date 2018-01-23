@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 // import { TrackerListComponent } from './tracker/tracker-list/tracker-list.component';
 
 const routes: Routes = [
-  { path: 'tracker', loadChildren: './tracker/tracker-routing.module.ts#TrackerModule' }
+  { path: 'tracker', loadChildren: () => TrackerRoutingModule }
 ];
 
 @NgModule({
