@@ -16,9 +16,10 @@ import { MatSelectModule } from '@angular/material/select';
     MatButtonModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatSelectModule
+    MatSelectModule,
+    MatTableModule
   ],
-  exports: [MatButtonModule, MatToolbarModule, MatSidenavModule, MatSelectModule],
+  exports: [MatButtonModule, MatToolbarModule, MatSidenavModule, MatSelectModule, MatTableModule],
   declarations: []
 })
 

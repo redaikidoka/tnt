@@ -10,11 +10,24 @@ mat-form-field
   mat-select(placeholder="Select a Year")
     mat-option(*ngFor="let year of years", [value]="year.school_year") 
       | {{ year.school_year }}
+
 mat-sidenav-container
   mat-sidenav.mat-sidebar(position="start", mode="side", opened="true", disableClose) 
     span Start
     h1 Boom
     h2 Explosion
   mat-sidenav-content(position="end") 
-    span Main
-    h1 Bang
+    h2 Main
+    
+    mat-table(dataSource="tntData")
+      ng-container(matColumnDef="line_tag")
+        <mat-header-cell *matHeaderCellDef> Item </mat-header-cell>
+        mat-cell(*matCellDef="let tnt") {{tnt.line_tag}}
+      ng-container(matColumnDef="phase_name")
+        <mat-header-cell *matHeaderCellDef> Phase </mat-header-cell>
+        mat-cell(*matCellDef="let tnt") {{tnt.phase_name}}
+      ng-container(matColumnDef="strategy_name")
+        <mat-header-cell *matHeaderCellDef> Strategy </mat-header-cell>
+        mat-cell(*matCellDef="let tnt") {{tnt.strategy_name}}
+      mat-header-row(*matHeaderRowDef="['line_tag', 'phase_name', 'strategy_name']")
+      mat-row(*matRowDef="let myRowData; columns: ['line_tag', 'phase_name', 'strategy_name']")
