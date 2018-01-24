@@ -17,7 +17,7 @@ $tnt-app-accent:  mat-palette($secondary-color-map, 500, 100, 700);
 $tnt-app-warn:    mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$tnt-app-theme: mat-light-theme($tnt-app-primary, $tnt-app-accent, $tnt-app-warn);
+$tnt-app-theme: mat-dark-theme($tnt-app-primary, $tnt-app-accent, $tnt-app-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component

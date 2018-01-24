@@ -19,7 +19,7 @@ mat-sidenav-container
   mat-sidenav-content(position="end") 
     h2 Main
     
-    mat-table(dataSource="tntData")
+    mat-table([dataSource]="tntData")
       ng-container(matColumnDef="line_tag")
         <mat-header-cell *matHeaderCellDef> Item </mat-header-cell>
         mat-cell(*matCellDef="let tnt") {{tnt.line_tag}}
